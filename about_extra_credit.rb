@@ -42,9 +42,13 @@ class Game
   private
 
   def uniq_player
-    name = Faker::Name.first_name
-    @players << Player.new(name) unless @players.reduce(false) do |a, e|
-      a || name == e.name
+    init_len = @players.length
+    until @players.length > init_len
+      name = Faker::Name.first_name
+      @players << Player.new(name) unless @players.reduce(false) do |a, e|
+        # returns true if name already present
+        a || name == e.name
+      end
     end
   end
 

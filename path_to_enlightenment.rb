@@ -31,11 +31,11 @@ require 'about_dice_project'
 require 'about_inheritance'
 require 'about_modules'
 require 'about_scope'
+require 'about_variable_scope'
 require 'about_class_methods'
 require 'about_message_passing'
 require 'about_proxy_object_project'
 require 'about_to_str'
-require 'about_variable_scope'
 in_ruby_version('jruby') do
   require 'about_java_interop'
 end
