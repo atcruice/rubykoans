@@ -1,12 +1,11 @@
 require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 class DiceSet
-  attr_reader :values, :non_scoring
+  attr_reader :values
 
   def roll(n)
     @values = []
     n.times { @values << rand(5) + 1 }
-    @non_scoring = 0 # TODO: complete non-scoring algorithm
   end
 end
 
